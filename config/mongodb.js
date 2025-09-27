@@ -1,0 +1,11 @@
+import mongoose from "mongoose";
+
+
+const connectDB =async ()=>{
+
+    mongoose.connection.on("connected",()=>{
+        console.log("Detabase is connected");
+    })
+    await mongoose.connect(`${process.env.MONGODB_URI}/MERN-AUTH`);
+};
+export default connectDB;
