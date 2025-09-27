@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 connectDB();
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['https://vershell-mern-auth-frontend-m1l3.vercel.app'];
 
 app.use(cors({
   origin: function(origin, callback) {
